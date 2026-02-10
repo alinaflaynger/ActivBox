@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+}
+
+img {
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+.conteiner {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 320px) {
+  .conteiner {
+    padding: 0 20px;
+  }
+}
+
+.features {
+  text-align: center;
+  padding: 78px 0 80px;
+}
+.features .conteiner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature__wrapper {
+  margin-bottom: 55px;
+}
+.feature__img {
+  height: 85px;
+  width: 85px;
+}
+.feature__title {
+  padding-bottom: 23px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 900;
+  color: #2D3033;
+  text-transform: Uppercase;
+}
+.feature__description {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #2D3033;
+}/*# sourceMappingURL=ctyle.css.map */
