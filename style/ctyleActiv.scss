@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$borderColor: #FF4343;
+$laptop: 1024px;
+$top: 767px;
+$mobile: 320px;
+
+@mixin fon($font-size, $line-height, $font-weight, $color ) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+img {
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+.conteiner {
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features {
+    text-align: center;
+    padding: 78px 0 80px;
+
+    & .conteiner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        row-gap: 88px;
+
+        @media (max-width:$laptop) {
+            gap: 20px;
+            row-gap: 50px;
+        }
+
+        @media (max-width:$top) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 42px;
+        }
+    }
+
+    @media (max-width:$top) {
+        padding: 40px 0 35px;
+    }
+}
+
+.feature {
+    &__wrapper {
+        margin: 0 auto 55px;
+        width: 100px;
+        height: 100px;
+
+        @media (max-width:$laptop) {
+            margin-bottom: 43px;
+            width: 85px;
+            height: 85px;
+        }
+
+        @media (max-width:$top) {
+            margin-bottom: 37px;
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__title {
+        padding-bottom: 23px;
+        @include fon(24px, 28px, 900, rgba(45, 48, 51, 1));
+        text-transform: Uppercase;
+
+        @media (max-width:$laptop) {
+            @include fon(18px, 21px, 900, rgba(45, 48, 51, 1));
+        }
+
+        @media (max-width:$top) {
+            padding-bottom: 9px;
+        }
+
+    }
+
+    &__description {
+        @include fon(18px, 21px, 400, #2D3033);
+
+        @media (max-width:$laptop) {
+            @include fon(14px, 21px, 400, #2D3033);
+        }
+
+        @media (max-width:$top) {
+            @include fon(14px, 16px, 400, #2D3033);
+        }
+    }
+}
