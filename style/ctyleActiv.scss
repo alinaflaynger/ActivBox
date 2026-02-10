@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    max-width: 0;
+    box-sizing: border-box;
+}
+.body{
+    font-family: "Raleway", sans-serif;
+}
+$background-color: #FF4343CC;
+@mixin fon(){
+
+}
+.conteiner{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.photos{
+    text-align: center;
+}
+.photo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+
+    &__img{
+        height: 100%;
+        width: 100%;
+    }
+
+    &__content{
+        height: 100%;
+        width: 100%;
+        background-color: $background-color;
+        padding: 84px 0 86px;
+    }
+
+    &__title{
+        padding-bottom: 22px;
+    }
+}
